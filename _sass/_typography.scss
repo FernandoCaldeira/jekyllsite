@@ -1,0 +1,28 @@
+@import "colors";
+
+@mixin bodyFonts {
+    font-family: 'Karla', Helvetica, sans-serif;
+    color: $c-neutral;
+}
+
+@mixin standartBody {
+    @include bodyFonts;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@mixin mobileBody {
+    @include bodyFonts;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@mixin desktopBody {
+    @include bodyFonts;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin titleFonts {
+    font-family: Arial, Helvetica, sans-serif;
+}
