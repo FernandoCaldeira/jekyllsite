@@ -34,7 +34,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# Collections Exercicio do Professor
+# Collections dos cards do trabalho
 collections:
   cards:
     output: true

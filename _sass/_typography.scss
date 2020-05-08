@@ -23,14 +23,43 @@
     line-height: 24px;
 }
 
-@mixin titleFonts {
+@mixin displayFonts {
     font-family: Arial, Helvetica, sans-serif;
     color: $c-primary;
 }
 
-@mixin titleH2Mobile {
-    @include titleFonts;
-    font-size: 16px;
-    line-height: 24px;
+@mixin display1 {
+    @include displayFonts;
+    font-size: 61.04px;
+    line-height: 76px;
+}
 
+@mixin display2 {
+    @include displayFonts;
+    font-size: 48.83px;
+    line-height: 60px;
+}
+
+@mixin display3 {
+    @include displayFonts;
+    font-size: 39.06px;
+    line-height: 50.8px;
+}
+
+@mixin display4 {
+    @include displayFonts;
+    font-size: 31.25px;
+    line-height: 40px;
+}
+
+@mixin display5 {
+    @include displayFonts;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+@mixin display6 {
+    @include displayFonts;
+    font-size: 20px;
+    line-height: 26px;
 }
