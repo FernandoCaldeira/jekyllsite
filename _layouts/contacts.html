@@ -1,24 +1,9 @@
 ---
 layout: default_w-nav
 ---
-
-<p>this is my contacts</p>
-
 <section>
     <h1>Let’s talk. Say hi! ✌</h1>
-    <h2>Email</h2>
-        <p>fernandonunescaldeira@gmail.com</p>
-        <a class="myemail" href="mailto:fernandonunescaldeira@gmail.com?subject=Hey Fernando let's talk!">Get in touch</a>
-
+    {% include myemail.html%}
     <h3>I'm also on:</h3>
-    <ul>
-        <li>
-            <a href="https://www.behance.net/fernandocaldeira" title="Click to see my Behance" class="vazia" target="_blank">
-                See my Behance<span>></span></a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/fernandonunescaldeira/" title="Click to see my LinkedIn" class="vazia" target="_blank">
-                See my LinkedIn<span>></span></a>
-        </li>
-    </ul>
+    {% include external-links.html %}
 </section>

@@ -2,26 +2,14 @@
 layout: default_w-nav
 ---
 
+<section>
 <h1>I've helped build some incredible products</h1>
+</section>
 
 <section class="digital-work">
     <h2>Some of my recent work</h2>
     <p>Focused on making a positive impact with a clean and user-friendly experience.</p>
-
-    <ul>
-        <li>
-            <h3>Evaristo App</h3>
-            <h4>Make Lisbon a green city</h4>
-            <p>Creation of an App that promotes sustainable habits and gives discounts using public transports.</p>
-            <h5>Research, Experience & Interface</h5>
-        </li>
-        <li>
-            <h3>Evaristo App</h3>
-            <h4>Make Lisbon a green city</h4>
-            <p>Creation of an App that promotes sustainable habits and gives discounts using public transports.</p>
-            <h5>Research, Experience & Interface</h5>
-        </li>
-    </ul>
+    {% include bigcard-modal.html %}
 </section>
 
 <section class="tradional-work">
@@ -29,10 +17,18 @@ layout: default_w-nav
     <p>Focused on making a positive impact with a clean and user-friendly experience.</p>
 
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+            {% include card-modal.html article="booklet" %}
+        </li>
+        <li>
+            {% include card-modal.html article="stricta" %}
+        </li>
+        <li>
+            {% include card-modal.html article="clickhouse" %}
+        </li>
+        <li>
+            {% include card-modal.html article="bewatt" %}
+        </li>
     </ul>
 </section>
 
