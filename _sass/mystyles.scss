@@ -64,14 +64,15 @@ main {
 }
 
 .standart-cards {
-    width: 500px;
-    height: 500px;
+    display: inline-block;
     background-image: url();
-    background-color: $c-primary;
+    color: $c-primary;
 }
 
 .big-cards {
-
+    display: inline-block;
+    background-image: url();
+    background-color: $c-primary;
 }
 /*-INTRODUCTION*/
 .answer {
