@@ -28,6 +28,10 @@ baseurl: "/jekyllsite" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+linkedin_username: fernandonunescaldeira
+facebook_username: fernandoncaldeira
+instagram_username: fernandodrewsomething
+twitter_username: fernandoncald
 
 # Build settings
 theme: minima
