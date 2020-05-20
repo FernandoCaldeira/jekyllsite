@@ -1,0 +1,28 @@
+@import "colors";
+@import "typography";
+@import "spacing";
+
+//cards
+.standart-cards {
+    display: inline-block;
+    background-color: $c-primary;
+}
+
+.big-cards {
+    display: inline-block;
+    background-color: $c-primary;
+}
+
+//cards-backgrounds
+.evaristo {
+    background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--HbWnhu6K--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://rainharvesting.co.uk/wp-content/uploads/2017/03/The-Core-Components-Of-A-Rainwater-Harvesting-System-That-You-Should-Be-Aware-Of.png");
+}
+
+.hopefoundation {
+    background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--HbWnhu6K--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://rainharvesting.co.uk/wp-content/uploads/2017/03/The-Core-Components-Of-A-Rainwater-Harvesting-System-That-You-Should-Be-Aware-Of.png");
+}
+
+//svgs
+.svg-arrow {
+    fill: $c-secondary;
+}

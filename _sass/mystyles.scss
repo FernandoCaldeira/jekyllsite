@@ -1,7 +1,7 @@
 @import "colors";
 @import "typography";
 @import "spacing";
-
+@import "components";
 /* Css Reset */
 /* Box sizing rules */
 *,
@@ -63,17 +63,6 @@ main {
     max-width: 800px;
 }
 
-.standart-cards {
-    display: inline-block;
-    background-image: url();
-    color: $c-primary;
-}
-
-.big-cards {
-    display: inline-block;
-    background-image: url();
-    background-color: $c-primary;
-}
 /*-INTRODUCTION*/
 .answer {
     @include display4;

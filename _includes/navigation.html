@@ -1,8 +1,6 @@
 <h2>{{ site.data.samplelist.docs_list_title }}</h2>
-<nav>
-    <ul>
+<ul>
     {% for navlinks in site.data.samplelist.docs %}
         <li><a href="{{site.baseurl}}/{{ navlinks.url }}">{{ navlinks.title }}</a></li>
     {% endfor %}
-    </ul>
-</nav>
+</ul>
