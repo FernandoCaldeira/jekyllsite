@@ -1,6 +1,7 @@
 @import "colors";
 @import "typography";
 @import "spacing";
+@import "buttons";
 
 //cards
 .standart-cards {
@@ -15,7 +16,7 @@
 
 //cards-backgrounds
 .evaristo {
-    background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--HbWnhu6K--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://rainharvesting.co.uk/wp-content/uploads/2017/03/The-Core-Components-Of-A-Rainwater-Harvesting-System-That-You-Should-Be-Aware-Of.png");
+    background-image: url("img/generic/fernando_portrait.png");
 }
 
 .hopefoundation {
@@ -28,8 +29,34 @@
     height: 272px;
 }
 
+//buttons
+.primary-btn {
+    @include main-button;
+}
+
+.secondary-btn {
+    @include second-button;
+}
+
+.tertiary-btn {
+    @include third-button;
+}
+
+
 //svgs
 .svg-arrow {
     fill: $c-secondary;
 }
 
+//mail section
+.mail-label {
+    padding-bottom: $space-m;
+}
+
+//skills section
+.skills {
+    li {
+        padding: $space-ss $space-s;
+        background-color: $c-primary;
+    }
+}

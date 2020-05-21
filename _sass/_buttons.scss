@@ -1,0 +1,24 @@
+@import "colors";
+@import "typography";
+@import "spacing";
+
+@mixin shape-button {
+    padding: $space-s $space-m;
+    border-radius: $space-m;
+}
+
+@mixin main-button {
+    @include shape-button;
+    background-color: $c-primary;
+}
+
+@mixin second-button {
+    @include shape-button;
+    border: 1px solid black;
+    background-color: red;
+}
+
+@mixin third-button {
+    border-bottom: 2px solid $c-primary;
+}
+
