@@ -59,8 +59,13 @@ img {
 
 /*-GERAL*/
 main {
+    margin: 0 auto;
     width: 100%;
     max-width: 800px;
+}
+
+section {
+    padding-bottom: 40px;
 }
 
 /*-INTRODUCTION*/

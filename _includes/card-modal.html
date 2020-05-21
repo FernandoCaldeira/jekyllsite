@@ -1,10 +1,11 @@
 {% for cards in site.cards %}
-    {% assign post = {{include.article}} %}
-    {% if cards.title == post %}
-    <a href="{{ cards.link }}" title="{{ cards.link-title }}" class='standart-cards {{ cards.title | remove:" "}}' target="_blank">   
-        <p>{{ cards.area }}</p><span>{% include svg-arrow.html %}</span>
-        <h4>{{ cards.title }}</h4>
-        <p>{{ cards.description }}</p>
-    </a>
-    {% endif %}
+{% assign post = {{include.article}} %}
+{% if cards.title == post %}
+<a href="{{ cards.link }}" title="{{ cards.link-title }}" class='standart-cards {{ cards.title | remove:" "}}'
+    target="_blank">
+    <p>{{ cards.area }}</p><span>{% include svg-arrow.html %}</span>
+    <h4>{{ cards.title }}</h4>
+    <p>{{ cards.description }}</p>
+</a>
+{% endif %}
 {% endfor %}
