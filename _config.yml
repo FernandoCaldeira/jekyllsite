@@ -26,12 +26,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   Come here I'm Fernando Caldeira a UX/UI Designer. Problem solver focused on design, technology, and business. Interested in creating solutions impact people's lives.
 baseurl: "/jekyllsite" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
 github_username:  jekyll
 linkedin_username: fernandonunescaldeira
 facebook_username: fernandoncaldeira
 instagram_username: fernandodrewsomething
 twitter_username: fernandoncald
+youtube_username: _EWTeiX0We1Yejed-XEMSQ
+dribbble_username: fernandocaldeira
+behance_username: fernandocaldeira
+
 
 # Build settings
 theme: minima
