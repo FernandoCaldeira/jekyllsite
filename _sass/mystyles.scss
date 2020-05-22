@@ -68,6 +68,46 @@ section {
     padding-bottom: $space-xl;
 }
 
+header {
+    nav {
+        display: flex;
+        align-items: baseline;
+        p {
+            flex-grow: 1;
+        }
+        ul {
+            display: flex;
+            li {
+                padding-right: $space-m;
+            }
+        }
+    }
+}
+
+footer {
+    
+    ul {
+        /*meter isto no ul para desktop - start
+        display: flex;
+        justify-content: space-evenly;
+        width: 800px;
+        margin: 0 auto;
+        end*/
+        li {
+            display: flex;
+            flex-direction: column;
+            a {
+                width: 100%;
+                text-align: center;
+                padding: $space-s;
+                border-top: 1px solid $c-neutral2;
+            }
+        }
+    }
+    p {
+        text-align: center;
+    }
+}
 /*-INTRODUCTION*/
 .answer {
     @include display4;
@@ -82,5 +122,39 @@ section {
 /*-ABOUTME*/
 
 /*-WORKS*/
+
+.intro-works {
+    h1 {
+        text-align: center;
+    }
+}
+
+.digital-work {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: $space-s;
+            /*desktop mudar para width:50% + padding*/
+        }
+    }
+}
+
+.traditional-work {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: $space-s;
+            /*desktop mudar para width:50% + padding*/
+        }
+    }
+}
 
 /*-CONTACTS*/
