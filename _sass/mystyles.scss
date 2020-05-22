@@ -2,6 +2,8 @@
 @import "typography";
 @import "spacing";
 @import "components";
+@import "cards";
+@import "buttons";
 /* Css Reset */
 /* Box sizing rules */
 *,
@@ -61,7 +63,9 @@ img {
 main {
     margin: 0 auto;
     width: 100%;
+    min-width: 272px;
     max-width: 800px;
+    //max-width: 800px; para dekstop
 }
 
 section {

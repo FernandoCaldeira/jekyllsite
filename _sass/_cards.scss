@@ -1,0 +1,37 @@
+@import "colors";
+
+@mixin cards-effect {
+    background-size: cover;
+    background-blend-mode: multiply, normal;
+}
+
+.evaristo {
+    background: linear-gradient( 0deg, #{$c-primary}, #{$c-primary}), url("img/works/evaristo.png");
+    @include cards-effect;
+}
+
+.hopefoundation {
+    background: linear-gradient( 0deg, #{$c-primary}, #{$c-primary}), url("img/works/hope-foundation.png");
+    @include cards-effect;
+}
+
+.booklet {
+    background: linear-gradient( 0deg, #{$c-primary}, #{$c-primary}), url("img/works/booklet.png");
+    @include cards-effect;
+}
+
+.stricta {
+    background: linear-gradient( 0deg, #{$c-primary}, #{$c-primary}), url("img/works/stricta.png");
+    @include cards-effect;
+}
+
+.clickhouse {
+    background: linear-gradient( 0deg, #{$c-primary}, #{$c-primary}), url("img/works/clickhouse.png");
+    @include cards-effect;
+}
+
+.bewatt {
+    background: linear-gradient( 0deg, #{$c-primary}, #{$c-primary}), url("img/works/bewatt.png");
+    @include cards-effect;
+}
+
