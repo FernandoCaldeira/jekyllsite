@@ -72,10 +72,19 @@ section {
     padding-bottom: $space-xl;
 }
 
+h1 {
+    @include display1;
+}
+
+h2 {
+    @include display2;
+}
+
 header {
     nav {
         display: flex;
         align-items: baseline;
+        border: 1px solid $c-neutral2;
         p {
             flex-grow: 1;
         }
@@ -129,6 +138,7 @@ footer {
 
 .intro-works {
     h1 {
+        @include display1;
         text-align: center;
     }
 }
