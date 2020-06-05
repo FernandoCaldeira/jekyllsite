@@ -27,6 +27,12 @@
     line-height: 24px;
 }
 
+@mixin bodyCaps {
+    @include desktopBody;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 @mixin displayFonts {
     font-family: 'Gilroy-Bold', Helvetica, Arial, sans-serif;
     color: $c-primary;

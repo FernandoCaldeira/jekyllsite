@@ -35,3 +35,27 @@
     @include cards-effect;
 }
 
+/*pensar se isto faz sentido aqui por baixo*/
+.cards {
+    border-radius: $space-ss;
+
+    a:link {
+        color: $c-secondary;
+    }
+    /* visited link */
+    a:visited {
+        color: green;
+    }
+    
+    /* mouse over link */
+    a:hover {
+        color: hotpink;
+    }
+    
+    /* selected link */
+    a:active {
+        color: $c-primary;
+    }
+
+}
+

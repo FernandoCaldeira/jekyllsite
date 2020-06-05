@@ -2,7 +2,7 @@
     {% for cards in site.cards %}
     {% if cards.highlight == true %}
     <li>
-        <div class='big-cards-parent {{ cards.title | remove:" "}}'>
+        <div class='cards big-cards-parent {{ cards.title | remove:" "}}'>
             <a href="{{ cards.link }}" title="{{ cards.link-title }}" class="big-cards" target="_blank">
                 <p>{{ cards.title }}</p>
                 <h3>{{ cards.bigcardtitle }}</h3>

@@ -59,9 +59,15 @@ img {
     display: block;
 }
 
+/*links effects*/
+a:link {
+    text-decoration: none;
+}
+
 /*-GERAL*/
 main {
     margin: 0 auto;
+    padding: 0 24px;
     width: 100%;
     min-width: 272px;
     max-width: 800px;
@@ -84,7 +90,8 @@ header {
     nav {
         display: flex;
         align-items: baseline;
-        border: 1px solid $c-neutral2;
+        border-bottom: 1px solid $c-neutral2;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
         p {
             flex-grow: 1;
         }
@@ -137,10 +144,16 @@ footer {
 /*-WORKS*/
 
 .intro-works {
+
+    height: 50vh;
+    display: flex;
+    align-items: center;
+
     h1 {
         @include display1;
         text-align: center;
     }
+
 }
 
 .digital-work {
@@ -165,10 +178,32 @@ footer {
             display: flex;
             justify-content: center;
             width: 100%;
+             /*controlo o tamanho a linha abaixo*/
+            //max-width: 400px;
             padding-bottom: $space-s;
             /*desktop mudar para width:50% + padding*/
         }
     }
+}
+
+.contacts-work {
+
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $c-neutral2;
+    padding-bottom: 0;
+
+    span {
+        @include display2;
+    }
+
+    h3 {
+        @include display3;
+    }
+
 }
 
 /*-CONTACTS*/

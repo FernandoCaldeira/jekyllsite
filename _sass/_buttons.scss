@@ -19,6 +19,7 @@
 }
 
 @mixin third-button {
-    border-bottom: 2px solid $c-primary;
+    display: inline-block;
+    padding: $space-s 0;
 }
 

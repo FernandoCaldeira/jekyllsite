@@ -1,7 +1,7 @@
 {% for cards in site.cards %}
 {% assign post = {{include.article}} %}
 {% if cards.title == post %}
-<div class='standart-cards-parent {{ cards.title | remove:" "}}'>
+<div class='cards standart-cards-parent {{ cards.title | remove:" "}}'>
     <a href="{{ cards.link }}" title="{{ cards.link-title }}" class='standart-cards' target="_blank">
         <p>{{ cards.area }}</p><span>{% include svg-arrow.html %}</span>
         <h4>{{ cards.title }}</h4>
