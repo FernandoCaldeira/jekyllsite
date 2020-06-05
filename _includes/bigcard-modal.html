@@ -3,7 +3,7 @@
     {% if cards.highlight == true %}
     <li>
         <div class='cards big-cards-parent {{ cards.title | remove:" "}}'>
-            <a href="{{ cards.link }}" title="{{ cards.link-title }}" class="big-cards" target="_blank">
+            <a href="{{ cards.link }}" rel="noreferrer" title="{{ cards.link-title }}" class="big-cards" target="_blank">
                 <p>{{ cards.title }}</p>
                 <h3>{{ cards.bigcardtitle }}</h3>
                 <p>{{ cards.description }}</p>

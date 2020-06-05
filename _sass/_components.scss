@@ -5,77 +5,6 @@
 @import "cards";
 
 
-//cards
-.standart-cards-parent {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    max-width: 340px;
-}
-
-.standart-cards {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    position: absolute;
-    color: $c-secondary;
-    padding: $space-m $space-s;
-    //max-width: 600px;
-    
-    p:first-child {
-        display: inline-block;
-        padding-bottom: $space-ss;
-    }
-
-    span {
-        right: 16px;
-        top: 24px;
-        position: absolute;
-    }
-
-    h4 {
-        padding-bottom: $space-xxs;
-    }
-
-}
-
-.big-cards-parent {
-    position: relative;
-    width: 100%;
-    height: 400px;
-}
-
-.big-cards {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    position: absolute;
-    color: $c-secondary;
-    padding: $space-xl $space-s;
-
-    p:first-child {
-        @include display5;
-        padding-bottom: $space-s;
-    }
-
-    h3 {
-        @include display3;
-        padding-bottom: $space-ss;
-    }
-
-    p:last-of-type {
-        max-width: 324px;
-        padding-bottom: $space-l;
-    }
-
-    h5{
-        @include bodyCaps;
-    }
-}
 
 //photos
 .myportrait {
@@ -97,16 +26,13 @@
     @include standartBody;
     color: $c-primary;
     
-
     p {
         border-bottom: 2px solid $c-primary;
         .svg-arrow {
             fill: $c-primary;
-        }
-        
+        }   
     }
 }
-
 
 //svgs
 .svg-arrow {
