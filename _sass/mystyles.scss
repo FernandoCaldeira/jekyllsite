@@ -87,6 +87,8 @@ h2 {
 }
 
 header {
+    /*
+    PRIMEIRA ITERAÇÃO DO FERNANDO
     nav {
         display: flex;
         align-items: baseline;
@@ -102,7 +104,117 @@ header {
             }
         }
     }
+    */
+    background: green;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+
+    .nav-toggle {
+        display: none;
+        /*antiga checkbox*/
+    }
+
+    .nav-toggle-label {
+       position: absolute;
+       top: 0;
+       right: 0;
+       margin-right: $space-xl;
+       border: 1px solid red;
+       height: 100%;
+       display: flex;
+       align-items: center;
+
+       span, span::before, span::after {
+           display: block;
+           background: white;
+           height: 2px;
+           width: 24px;
+           border-radius: 2px;
+           position: relative;
+           //estilizar o x aqui é onde vou meter o hamburguer icon
+       }
+
+       @media screen and (min-width: 800px){
+        display: none;
+        }
+    }
+
+    nav {
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        left: 0;
+        background: yellow;
+        width: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+
+        li {
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            
+            a {
+                /*aqui estilizar as fonts*/
+                opacity: 0;
+                transition: opacity 150ms ease-in-out;
+                &:hover {
+                    /*color*/
+                }
+            }
+
+        }
+    }
+
+    .nav-toggle:checked ~ nav {
+        transform: scale(1,1);
+    }
+
+    .nav-toggle:checked ~ nav a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+
+    @media screen and (min-width: 800px){
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+
+        .nav-title {
+            grid-column: 2 / 3;
+        }
+
+        nav {
+            /*confirmar se posso usar isto*/
+            all: unset;
+            grid-column: 3 / 4;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                border: 1px solid red;
+
+                li {
+                    margin-left: $space-xl;
+                    margin-bottom: 0;
+
+                    a {
+                        opacity: 1;
+                    }
+
+                }
+                
+                
+            }
+
+        }
+    }
 }
+
 
 footer {
     
