@@ -14,8 +14,8 @@
 
 @mixin second-button {
     @include shape-button;
-    border: 1px solid black;
-    background-color: red;
+    border: 1px solid $c-secondary;
+    background-color: none;
 }
 
 @mixin third-button {

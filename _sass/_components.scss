@@ -19,6 +19,7 @@
 
 .secondary-btn {
     @include second-button;
+    color: $c-secondary;
 }
 
 .tertiary-btn {

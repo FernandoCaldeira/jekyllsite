@@ -6,7 +6,6 @@
 
 @mixin bodyFonts {
     font-family: 'Karla', Helvetica, Arial, sans-serif;
-    color: $c-neutral;
 }
 
 @mixin standartBody {
@@ -56,6 +55,12 @@
     line-height: 50.8px;
 }
 
+@mixin display3-link {
+    font-family: 'Gilroy-Bold', Helvetica, Arial, sans-serif;
+    font-size: 39.06px;
+    line-height: 50.8px;
+}
+
 @mixin display4 {
     @include displayFonts;
     font-size: 31.25px;
@@ -64,6 +69,12 @@
 
 @mixin display5 {
     @include displayFonts;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+@mixin display5-link {
+    font-family: 'Gilroy-Bold', Helvetica, Arial, sans-serif;
     font-size: 25px;
     line-height: 30px;
 }

@@ -25,6 +25,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 ul[class],
 ol[class],
@@ -71,6 +72,11 @@ main {
     width: 100%;
     min-width: 272px;
     max-width: 800px;
+
+    & > section:first-child {
+        padding-top: calc(#{$space-xl} + #{$space-l});
+        padding-bottom: $space-xl;
+    }
     //max-width: 800px; para dekstop
 }
 
@@ -79,37 +85,41 @@ section {
 }
 
 h1 {
-    @include display1;
+    @include display3;
 }
 
 h2 {
-    @include display2;
+    @include display5;
+    padding-bottom: $space-s;
 }
 
 header {
-    /*
-    PRIMEIRA ITERAÇÃO DO FERNANDO
-    nav {
-        display: flex;
-        align-items: baseline;
-        border-bottom: 1px solid $c-neutral2;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-        p {
-            flex-grow: 1;
-        }
-        ul {
-            display: flex;
-            li {
-                padding-right: $space-m;
-            }
-        }
-    }
-    */
     background: green;
     text-align: center;
     position: fixed;
     z-index: 999;
     width: 100%;
+    height: $space-xl;
+    display: flex;
+    align-items: center;
+
+    p {
+        @include display5;
+        color: $c-neutral;
+        margin-left: $space-m;
+        span {
+            display: none;
+
+            @media screen and (min-width: 800px){
+                display: flex;
+                }
+        }
+
+        @media screen and (min-width: 800px){
+            display: flex;
+            align-items: center;
+        }
+    }
 
     .nav-toggle {
         display: none;
@@ -120,7 +130,7 @@ header {
        position: absolute;
        top: 0;
        right: 0;
-       margin-right: $space-xl;
+       margin-right: $space-m;
        border: 1px solid red;
        height: 100%;
        display: flex;
@@ -135,10 +145,11 @@ header {
            position: relative;
            //estilizar o x aqui é onde vou meter o hamburguer icon
        }
-
+       
        @media screen and (min-width: 800px){
         display: none;
         }
+
     }
 
     nav {
@@ -153,11 +164,16 @@ header {
         transition: transform 400ms ease-in-out;
 
         li {
+            display: flex;
+            @include display4;
+            /*
             margin-bottom: 1rem;
             margin-left: 1rem;
-            
+            */
             a {
                 /*aqui estilizar as fonts*/
+                width: 100%;
+                padding: $space-s;
                 opacity: 0;
                 transition: opacity 150ms ease-in-out;
                 &:hover {
@@ -180,7 +196,8 @@ header {
     @media screen and (min-width: 800px){
         display: grid;
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-
+        height: $space-xl;
+    
         .nav-title {
             grid-column: 2 / 3;
         }
@@ -197,9 +214,11 @@ header {
                 display: flex;
                 justify-content: flex-end;
                 border: 1px solid red;
+                margin: 0;
 
                 li {
-                    margin-left: $space-xl;
+                    @include standartBody;
+                    margin-left: $space-ss;
                     margin-bottom: 0;
 
                     a {
@@ -217,25 +236,35 @@ header {
 
 
 footer {
-    
-    ul {
-        /*meter isto no ul para desktop - start
-        display: flex;
-        justify-content: space-evenly;
-        width: 800px;
-        margin: 0 auto;
-        end*/
-        li {
-            display: flex;
-            flex-direction: column;
-            a {
-                width: 100%;
-                text-align: center;
-                padding: $space-s;
-                border-top: 1px solid $c-neutral2;
+    nav {
+        ul {
+            li {
+                display: flex;
+                flex-direction: column;
+                a {
+                    width: 100%;
+                    text-align: center;
+                    padding: $space-s;
+                    border-top: 1px solid $c-neutral2;
+                    @media screen and (min-width: 800px) {
+                        border-top: 0;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 800px) {
+                display: flex;
+                justify-content: space-evenly;
+                width: 800px;
+                margin: 0 auto; 
             }
         }
+
+        @media screen and (min-width: 800px) {
+            border-top: 1px solid $c-neutral2;
+        }
     }
+
     p {
         text-align: center;
     }
@@ -255,18 +284,21 @@ footer {
 
 /*-WORKS*/
 
-.intro-works {
+body main section.intro-works {
 
-    height: 50vh;
-    display: flex;
-    align-items: center;
 
     h1 {
-        @include display1;
         text-align: center;
     }
 
+    @media screen and (min-width: 800px) {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    
 }
+
 
 .digital-work {
     ul {
@@ -284,29 +316,32 @@ footer {
 
 .traditional-work {
     ul {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-rows: 1fr;
+        row-gap: $space-s;
+
         li {
             display: flex;
             justify-content: center;
-            width: 100%;
-             /*controlo o tamanho a linha abaixo*/
-            //max-width: 400px;
-            padding-bottom: $space-s;
-            /*desktop mudar para width:50% + padding*/
         }
+
+        @media screen and (min-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: $space-s;    
+        }
+
     }
 }
 
 .contacts-work {
-
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $c-neutral2;
-    padding-bottom: 0;
+    color: $c-secondary;
+    position: relative;
 
     span {
         @include display2;
@@ -314,8 +349,38 @@ footer {
 
     h3 {
         @include display3;
+        color: $c-secondary;
+        padding: $space-ss;
     }
+
+    .secondary-btn {
+        top: $space-ml;
+        position: relative;
+    }
+
+    div {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background-color: $c-primary;
+        z-index: -1;
+    }
+
+    @media screen and (min-width: 800px) {
+        height: 50vh; 
+        }
 
 }
 
 /*-CONTACTS*/
+
+.contacts-page {
+    h1 {
+        @include display2;
+        padding-bottom: $space-l;
+    }
+    .alsoon {
+        @include display3;
+        padding-top: $space-xl;
+    }
+}
