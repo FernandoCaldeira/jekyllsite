@@ -94,7 +94,7 @@ h2 {
 }
 
 header {
-    background: green;
+    background: $c-secondary;
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -102,6 +102,8 @@ header {
     height: $space-xl;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid $c-neutral2;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.02);
 
     p {
         @include display5;
@@ -136,12 +138,10 @@ header {
        display: flex;
        align-items: center;
 
-       span, span::before, span::after {
+       span {
+           @include display5;
            display: block;
-           background: white;
-           height: 2px;
-           width: 24px;
-           border-radius: 2px;
+           width: $space-l;
            position: relative;
            //estilizar o x aqui é onde vou meter o hamburguer icon
        }
@@ -157,28 +157,32 @@ header {
         text-align: left;
         top: 100%;
         left: 0;
-        background: yellow;
+        background-color: $c-secondary;
         width: 100%;
         transform: scale(1, 0);
         transform-origin: top;
         transition: transform 400ms ease-in-out;
+        
+        ul {
+            margin: 0;
 
-        li {
-            display: flex;
-            @include display4;
-            /*
-            margin-bottom: 1rem;
-            margin-left: 1rem;
-            */
-            a {
-                /*aqui estilizar as fonts*/
-                width: 100%;
-                padding: $space-s;
-                opacity: 0;
-                transition: opacity 150ms ease-in-out;
-                &:hover {
-                    /*color*/
+            li {
+                display: flex;
+                @include display4;
+                border-bottom: 1px solid $c-neutral2;
+    
+                a {
+                    /*aqui estilizar as fonts*/
+                    color: $c-neutral;
+                    width: 100%;
+                    padding: $space-s;
+                    opacity: 0;
+                    transition: opacity 150ms ease-in-out;
+                    &:hover {
+                        /*color*/
+                    }
                 }
+    
             }
 
         }
@@ -195,11 +199,20 @@ header {
 
     @media screen and (min-width: 800px){
         display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
         height: $space-xl;
     
         .nav-title {
             grid-column: 2 / 3;
+
+            span {
+                padding-left: $space-ss;
+                display: none;
+                color: $c-neutral2;
+
+                @media screen and (min-width: 1200px) {
+                    display: block;
+                }
+            }
         }
 
         nav {
@@ -215,9 +228,9 @@ header {
                 justify-content: flex-end;
                 border: 1px solid red;
                 margin: 0;
-
+                
                 li {
-                    @include standartBody;
+                    @include desktopBody;
                     margin-left: $space-ss;
                     margin-bottom: 0;
 
@@ -231,6 +244,10 @@ header {
             }
 
         }
+    }
+
+    @media screen and (min-width: 1000px){
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
     }
 }
 
@@ -267,6 +284,7 @@ footer {
 
     p {
         text-align: center;
+        padding-bottom: $space-l;
     }
 }
 /*-INTRODUCTION*/
@@ -280,7 +298,6 @@ footer {
     border: 1.5px solid $c-primary;
     border-radius: $space-ss $space-ss 0 $space-ss;
 }
-/*-ABOUTME*/
 
 /*-WORKS*/
 
@@ -335,7 +352,7 @@ body main section.intro-works {
 }
 
 .contacts-work {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,3 +401,79 @@ body main section.intro-works {
         padding-top: $space-xl;
     }
 }
+
+/*-ABOUTME*/
+
+.about-me {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: $space-s;
+
+    .punchline {
+        display: block;
+        padding-top: $space-s;
+    }
+        
+        @media screen and (min-width: 664px) {
+            h1 {
+                grid-area: title;
+            }
+    
+            img {
+                grid-area: img;
+            }
+    
+            .tagline {
+                grid-area: tag;
+            }
+    
+            grid-template-columns: 2fr 272px;
+            grid-column-gap: $space-s;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "title title"
+            "tag img"; 
+        }
+        
+}
+
+.about-skills {
+    
+    .container-skills {
+        width: 100%;
+        // meter aqui flex para pc
+        .discovery-skills {
+            @media screen and (min-width: 664px){
+                width: 324px;
+            }
+        }
+        .design-skills {
+            @media screen and (min-width: 664px){
+                width: 324px;
+            }
+        }
+    }
+
+    .skills {
+
+        li {
+            padding-bottom: $space-s;
+
+            p {
+                display: inline-block;
+                padding: $space-ss $space-s;
+                background-color: $c-primary;
+                border-radius: $space-m;
+                color: $c-secondary;
+            }
+        }
+    }
+
+    @media screen and (min-width: 664px) {
+        li {
+            display: inline-block;
+        }
+ 
+    }
+}
+
