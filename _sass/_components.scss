@@ -4,51 +4,42 @@
 @import "buttons";
 @import "cards";
 
-
-
-//photos
 .myportrait {
-    width: 272px;
-    height: 272px;
+  width: 272px;
+  height: 272px;
 }
 
-//buttons
 .primary-btn {
-    @include main-button;
+  @include main-button;
+  color: $c-secondary;
 }
 
 .secondary-btn {
-    @include second-button;
-    color: $c-secondary;
+  @include second-button;
+  color: $c-secondary;
 }
 
 .tertiary-btn {
-    @include third-button;
-    @include standartBody;
-    color: $c-primary;
-    
-    p {
-        border-bottom: 2px solid $c-primary;
-        .svg-arrow {
-            fill: $c-primary;
-        }   
+  @include third-button;
+  @include standartBody;
+  color: $c-primary;
+
+  p {
+    border-bottom: 2px solid $c-primary;
+    .svg-arrow {
+      fill: $c-primary;
     }
+  }
 }
 
-//svgs
 .svg-arrow {
-    fill: $c-secondary;
+  fill: $c-secondary;
 }
 
-//mail section
 .mail-label {
-    padding-bottom: $space-m;
+  padding-bottom: $space-m;
 }
 
-//skills section
-
-
-//contacts-work
 .contacts-work {
-    text-align: center;
+  text-align: center;
 }
