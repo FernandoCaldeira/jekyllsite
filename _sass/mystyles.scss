@@ -42,6 +42,11 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  color: $c-neutral;
+
+  @media screen and (min-width: 800px) {
+    @include mobileBody;
+  }
 }
 
 ul[class],
@@ -78,12 +83,12 @@ section {
 }
 
 h1 {
-  @include display3;
+  @include display2;
 }
 
 h2 {
   @include display5;
-  padding-bottom: $space-s;
+  padding-bottom: $space-xs;
 }
 
 header {
@@ -304,8 +309,8 @@ footer {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        width: 800px;
-        margin: 0 auto;
+        width: 600px;
+        margin: $space-m auto 0;
       }
     }
 
@@ -315,25 +320,67 @@ footer {
   }
 
   p {
+    font-size: 13px;
     text-align: center;
+    padding-top: $space-m;
     padding-bottom: $space-l;
   }
 }
 
 /*-INTRODUCTION*/
-.intro-img {
-  width: 320px;
-  height: 320px;
-  background-size: cover;
-  background-image: url("img/generic/fernando.png");
+
+.introduction-sec {
+  @media screen and (min-width: 800px) {
+    padding-bottom: $space-xxl;
+  }
 }
 
+.intro-section {
+  @media screen and (min-width: 800px) {
+    display: grid;
+
+    .intro-img {
+      grid-area: img;
+    }
+  
+    h1 {
+      grid-area: fernando;
+    }
+
+    span {
+      display: inline-block;
+      width: 100%;
+    }
+  
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "fernando img";
+  }
+
+
+  .img-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .intro-img {
+    width: 234px;
+    height: 320px;
+    background-size: cover;
+    background-image: url("img/generic/fernando.png");
+  }
+}
 main section.intro-section {
   padding-top: $space-l;
 }
 
 .answer {
   @include display4;
+
+  @media screen and (min-width: 800px) {
+    @include display3;
+  }
 }
 
 .chatbox {
@@ -347,6 +394,7 @@ main section.intro-section {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  padding-bottom: $space-l;
 
   p {
     @include display6;
@@ -374,12 +422,44 @@ main section.intro-section {
   }
 }
 
-.colab-img {
-  width: 320px;
-  height: 320px;
-  background-size: cover;
-  background-image: url("img/generic/colegas.png");
+.intro-projects { 
+  
+  h3 {
+  @include display5;
+  color: $c-neutral;
 }
+
+  ul {
+
+    @media screen and (min-width: 800px) {
+      display: grid;
+      grid-column-gap: $space-s;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.colab-sec {
+
+  span {
+    display: flex;
+    justify-content: flex-end; 
+  }
+  .img-container {
+    display: flex;
+    justify-content: flex-end;
+
+    .colab-img {
+      width: 320px;
+      height: 320px;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-image: url(img/generic/colegas.png);
+}
+  }
+
+}
+
 
 .hand-loop {
   display: -webkit-box;
@@ -392,6 +472,22 @@ main section.intro-section {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
   font-size: 2rem;
+}
+
+.postgradwidth {
+  max-width: 500px;
+}
+
+.informationwidth {
+  max-width: 600px;
+}
+
+.physiswidth {
+  max-width: 550px;
+}
+
+.contactswidth {
+  max-width: 540px;
 }
 
 @-webkit-keyframes mover {
@@ -419,15 +515,33 @@ main section.intro-section {
   }
 }
 
+.intro-physis {
+  
+  padding-top: $space-s;
+    @media screen and (min-width: 800px) {
+      display: grid;
+      grid-column-gap: $space-s;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  
+}
+
 /*-WORKS*/
+
+.worktag {
+  @include display3;
+  color: $c-neutral;
+}
 
 body main section.intro-works {
   h1 {
     text-align: center;
+    @include display2;
   }
 
   @media screen and (min-width: 800px) {
-    height: 50vh;
+    height: 70vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -438,6 +552,12 @@ body main section.intro-works {
 }
 
 .digital-work {
+  & > p {
+    max-width: 360px;
+    margin: auto;
+    padding-bottom: $space-m;
+  }
+
   ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -456,9 +576,22 @@ body main section.intro-works {
       padding-bottom: $space-s;
     }
   }
+  @media screen and (min-width: 800px) {
+  & > h2, & > p {
+    text-align: center;
+  }
+}
+
 }
 
 .traditional-work {
+  padding-top: $space-l;
+  & > p {
+    max-width: 380px;
+    margin: auto;
+    padding-bottom: $space-m;
+  }
+
   ul {
     display: -ms-grid;
     display: grid;
@@ -501,10 +634,15 @@ body main section.intro-works {
       -ms-grid-column: 3;
     }
   }
+  @media screen and (min-width: 800px) {
+    & > h2, & > p {
+      text-align: center;
+    }
+  }
 }
 
 .contacts-work {
-  height: 80vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,7 +683,7 @@ body main section.intro-works {
   }
 
   @media screen and (min-width: 800px) {
-    height: 50vh;
+    height: 80vh;
   }
 }
 
@@ -571,6 +709,10 @@ body main section.intro-works {
   grid-template-rows: 1fr;
   row-gap: $space-s;
 
+  h1 {
+    @include display3;
+  }
+
   .punchline {
     display: block;
     padding-top: $space-s;
@@ -581,6 +723,12 @@ body main section.intro-works {
       grid-area: title;
     }
 
+    p {
+      padding-left: $space-l;
+      padding-top: $space-ml;
+      width: 435px;
+    }
+
     img {
       grid-area: img;
     }
@@ -588,6 +736,7 @@ body main section.intro-works {
     .tagline {
       grid-area: tag;
     }
+    
 
     -ms-grid-columns: 2fr $space-s 272px;
     grid-template-columns: 2fr 272px;
@@ -601,6 +750,17 @@ body main section.intro-works {
 }
 
 .about-skills {
+
+  h2 {
+    padding-bottom: $space-ml;
+    font-size: 39.06px;
+  }
+  h3 {
+    padding-bottom: $space-ss;
+    @include display5;
+    color: $c-neutral;
+  }
+  
   .container-skills {
     width: 100%;
     .discovery-skills {
@@ -608,7 +768,8 @@ body main section.intro-works {
         padding-bottom: $space-s;
       }
       @media screen and (min-width: 664px) {
-        width: 324px;
+        width: 346px;
+        padding-left: $space-l;
       }
     }
     .design-skills {
@@ -616,7 +777,8 @@ body main section.intro-works {
         padding-bottom: $space-s;
       }
       @media screen and (min-width: 664px) {
-        width: 324px;
+        width: 335px;
+        padding-left: $space-ml;
       }
     }
 
@@ -624,6 +786,7 @@ body main section.intro-works {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      justify-content: space-between;
     }
   }
 

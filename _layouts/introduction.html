@@ -3,16 +3,18 @@ layout: default_no-nav
 ---
 
 <section class="intro-section">
-  <h1>Hi there, Fernando speaking</h1>
-  <div class="intro-img" aria-hidden="true"></div>
+  <h1><span>Hi there,</span> Fernando speaking</h1>
+  <div class="img-container">
+    <div class="intro-img" aria-hidden="true"></div>
+  </div>
 </section>
 
-<section>
+<section class="introduction-sec">
   <h2 class="answer">I have a problem solving creative mind.</h2>
   <p>Love to illustrate, design products, and code here and there.</p>
 </section>
 
-<section>
+<section class="introduction-sec">
   <div class="chatbox">
     <p>Tell me more about you! 😌</p>
   </div>
@@ -29,14 +31,14 @@ layout: default_no-nav
   <p class="pad-top">2019 -</p>
   <h2 class="answer">Currently I'm working at a cool place called PACSIS,</h2>
   <p>doing User Interface design and coding it!</p>
-  <h2 class="answer">& Studying</h2>
-  <p>
+  <h2 class="answer pad-top">& Studying</h2>
+  <p class="postgradwidth">
     in a post-graduate course called Digital Design Experience, super
     challenging and mind changing.
   </p>
 </section>
 
-<section class="intro-projects">
+<section class="intro-projects introduction-sec">
   <h3>Projects</h3>
   <ul>
     <li class="pad-bot">
@@ -55,29 +57,31 @@ layout: default_no-nav
   </div>
 </section>
 
-<section>
+<section class="introduction-sec colab-sec">
   <h2 class="answer">No, I was very lucky with my colaborations,</h2>
   <p>and worked with the most amazing people.</p>
   <span class="hand-loop">👇</span>
-  <div class="colab-img" aria-hidden="true"></div>
+  <div class="img-container">
+    <div class="colab-img" aria-hidden="true"></div>
+  </div>
 </section>
 
-<section>
+<section class="introduction-sec">
   <p>2019</p>
-  <h2 class="answer">
+  <h2 class="answer informationwidth">
     Information Planet allowed me to work in strategy and brand.
   </h2>
-  <p>
+  <p class="pad-bot">
     My responsibilities involved branding, editorial, and promotional objects.
   </p>
   {% include card-modal.html article="booklet" %}
 </section>
 
-<section>
+<section class="introduction-sec">
   <p>2017-2019</p>
-  <h2 class="answer">Explored many design fields at Physis Studio.</h2>
+  <h2 class="answer physiswidth">Explored many design fields at Physis Studio.</h2>
   <p>Worked remotely as a generalist designer in studio.</p>
-  <ul>
+  <ul class="intro-physis">
     <li class="pad-bot">
       {% include card-modal.html article="stricta" %}
     </li>
@@ -90,8 +94,8 @@ layout: default_no-nav
   </ul>
 </section>
 
-<section class="introduction-contacts">
-  <h3 class="answer">
+<section class="introduction-contacts introduction-sec">
+  <h3 class="answer contactswidth">
     Now that you know what I do, We should work together! Reach out to:
   </h3>
   {% include myemail.html%} {% include external-links.html %}

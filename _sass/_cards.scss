@@ -93,6 +93,7 @@
   }
 
   p:first-child {
+    @include bodyCaps;
     display: inline-block;
     padding-bottom: $space-ss;
   }
@@ -106,6 +107,7 @@
   h4 {
     @include display5-link;
     padding-bottom: $space-xxs;
+    text-transform: capitalize;
   }
 }
 
@@ -132,6 +134,7 @@
   p:first-child {
     @include display5-link;
     padding-bottom: $space-s;
+    text-transform: capitalize;
   }
 
   h3 {
@@ -147,4 +150,9 @@
   h5 {
     @include bodyCaps;
   }
+
+  @media screen and (min-width: 800px) {
+    padding: $space-xl $space-ml;
+  }
+
 }
